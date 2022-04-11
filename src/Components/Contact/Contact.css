@@ -1,0 +1,102 @@
+.container.contact-container{
+    width: 59%;
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap:3rem;
+}
+.contact_content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color-minor);
+    border-radius: 1.6rem;
+    margin: 0rem 0rem 1rem 0;
+    padding: 1.2rem;
+    border: 2px solid transparent;
+    width: 65%;
+    transition: var(--transition);
+    align-items: center;
+}
+.contact-info:hover{
+    background: transparent;
+    border: 2px solid var(--bg-color-minor);
+}
+.icons{
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    text-align: center;
+}
+.contact-info h4{
+    margin-top: 0.9rem;
+    font-weight: 700;
+}
+.contact-info h5{
+    color: var(--color-light);
+    font-size: 0.6rem;
+}
+.contact-info a{
+    font-size: 0.8rem;
+    padding: 0.8rem 0 0 0;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+input{
+    background: transparent;
+    border: 3px solid var(--bg-color-minor);
+    width: 100%;
+    padding: 1.1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    color: var(--color-light);
+}
+textarea{
+    background: transparent;
+    border: 3px solid var(--bg-color-minor);
+    width: 100%;
+    padding: 1.1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    color: var(--color-light);
+    resize: none;
+}
+
+/* =================== MEDIA QUERIES FOR MEDIUM DEVICES===================== */
+
+@media screen and (max-width: 1024px) {
+    .container.contact-container{
+        width: var(--container-width-md);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-info {
+        width: var(--container-width-md);
+        margin: 0 auto 0.8rem auto;
+    }
+    .form{
+        width: var(--container-width-md);
+        margin: 0 auto 0.8rem auto;
+    }
+   
+}
+
+/* =================== MEDIA QUERIES FOR SMALL DEVICES===================== */
+
+@media screen and (max-width: 600px) {
+   .container.contact-container{
+       width: var(--container-width-sm);
+   }
+
+.contact-info{
+    width: var(--container-width-sm);
+    margin: 0 auto 0.8rem auto;
+}
+}
